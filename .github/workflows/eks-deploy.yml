@@ -59,10 +59,10 @@ jobs:
         run: |
           IMAGE_URI=${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.run_number }}
 
-          sed -i "s|IMAGE_PLACEHOLDER|$IMAGE_URI|g" K8S/deployment.yaml
+          sed -i "s|IMAGE_PLACEHOLDER|$IMAGE_URI|g" K8S/deployment.yml
 
-          echo "Updated deployment.yaml:"
-          cat K8S/deployment.yaml
+          echo "Updated deployment.yml:"
+          cat K8S/deployment.yml
 
       - name: Deploy Application to EKS
         run: |
