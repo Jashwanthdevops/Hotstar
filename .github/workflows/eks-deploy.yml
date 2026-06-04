@@ -70,7 +70,7 @@ jobs:
 
       - name: Verify Rollout Status
         run: |
-          kubectl rollout status deployment/hotstar --timeout=300s
+          kubectl rollout status deployment/hotstar-app --timeout=300s
 
       - name: Verify Kubernetes Resources
         run: |
